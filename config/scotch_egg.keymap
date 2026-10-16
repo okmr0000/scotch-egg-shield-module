@@ -9,37 +9,46 @@
 
         default_layer {
             bindings = <
-&kp ESC        &kp Q         &kp W             &kp E         &kp R          &kp T      &kp Y        &kp U          &kp I      &kp O      &kp P      &kp BACKSPACE
-&mt LCTRL TAB  &kp A         &kp S             &kp D         &kp F          &kp G      &kp H        &kp J          &kp K      &kp L      &kp MINUS  &kp ENTER
-&kp LEFT_SHIFT &kp Z         &kp X             &kp C         &kp V          &kp B      &kp N        &kp M          &kp COMMA  &kp DOT    &kp UP     &kp AT_SIGN
-&mo 3          &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 1 LANG2   &kp SPACE      &kp SPACE  &kp C_VOL_UP &lt 2 SPACE   &lt 1 LANG1 &kp LEFT   &kp DOWN   &kp RIGHT
+&kp ESC         &kp Q         &kp W             &kp E        &kp R  &kp T      &kp Y        &kp U  &kp I        &kp O     &kp P      &kp BACKSPACE
+&mt LCTRL TAB   &kp A         &kp S             &kp D        &kp F  &kp G      &kp H        &kp J  &kp K        &kp L     &kp MINUS  &kp ENTER
+&kp LEFT_SHIFT  &kp Z         &kp X             &kp C        &kp V  &kp B      &kp N        &kp M  &kp COMMA    &kp DOT   &kp UP     &kp AT_SIGN
+&mo 3           &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 1 LANG2  &mo 1  &kp SPACE  &lt 2 SPACE  &mo 1  &lt 1 LANG1  &kp LEFT  &kp DOWN   &kp RIGHT
             >;
         };
 
         lower_layer {
             bindings = <
-&trans  &kp LS(N1)       &kp LS(N2)        &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)    &kp LS(N8)            &kp LS(N9)             &kp N0       &trans
-&trans  &kp KP_PLUS      &kp KP_SUBTRACT   &kp KP_EQUAL &kp CARET  &kp SLASH   &kp COLON   &kp SEMICOLON &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS &kp TILDE    &trans
-&trans  &kp KP_MULTIPLY  &kp KP_DIVIDE     &kp DQT      &kp SQT     &kp UNDER   &kp EXCL    &kp QUESTION  &kp LESS_THAN         &kp GREATER_THAN      &trans       &trans
-&trans  &trans            &trans            &trans       &kp LC(LG(SPACE)) &trans &kp LS(LG(N4)) &trans         &trans                  &trans                   &trans       &trans
+&trans  &kp LS(N1)       &kp LS(N2)       &kp LS(N3)    &kp LS(N4)         &kp LS(N5)  &kp LS(N6)      &kp LS(N7)     &kp LS(N8)            &kp LS(N9)             &kp N0     &trans
+&trans  &kp KP_PLUS      &kp KP_SUBTRACT  &kp KP_EQUAL  &kp CARET          &kp SLASH   &kp COLON       &kp SEMICOLON  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE  &trans
+&trans  &kp KP_MULTIPLY  &kp KP_DIVIDE    &kp DQT       &kp SQT            &kp UNDER   &kp EXCL        &kp QUESTION   &kp LESS_THAN         &kp GREATER_THAN       &trans     &trans
+&trans  &trans           &trans           &trans        &kp LC(LG(SPACE))  &trans      &kp LS(LG(N4))  &trans         &trans                &trans                 &trans     &trans
             >;
         };
 
         raise_layer {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR  &bt BT_CLR_ALL  &out OUT_USB  &out OUT_BLE  &studio_unlock   &bootloader       &sys_reset
-&trans         &trans         &trans         &trans        &trans        &trans       &trans          &trans        &kp LEFT_BRACKET &kp RIGHT_BRACKET &trans             &trans
-&trans         &trans         &trans         &trans        &trans        &trans       &trans          &trans        &kp LEFT_BRACE   &kp RIGHT_BRACE   &trans             &trans
-&trans         &trans         &trans         &trans        &trans        &trans       &trans          &trans        &trans           &trans            &trans             &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR  &bt BT_CLR_ALL  &out OUT_USB  &out OUT_BLE      &studio_unlock     &bootloader  &sys_reset
+&trans        &trans        &trans        &trans        &trans        &trans      &trans          &trans        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans       &trans
+&trans        &trans        &trans        &trans        &trans        &trans      &trans          &trans        &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans       &trans
+&trans        &trans        &trans        &trans        &trans        &trans      &trans          &trans        &trans            &trans             &trans       &trans
             >;
         };
 
         bt_layer {
             bindings = <
-&none      &none  &none  &none  &none      &kp LS(N3)  &kp LS(N5)  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS      &none
-&kp LC(TAB) &none &none  &none  &none      &none       &kp LS(N4)  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SUBTRACT  &none
-&none      &none  &none  &none  &kp UNDER  &none       &kp LS(N6)  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MULTIPLY  &kp KP_COMMA
-&none      &none  &none  &none  &kp LANG2  &none       &kp LANG1   &kp KP_NUMBER_0  &none            &kp KP_DIVIDE    &kp KP_EQUAL     &none
+&none        &none  &none  &none  &none      &kp LS(N3)  &kp LS(N5)  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS      &none
+&kp LC(TAB)  &none  &none  &none  &none      &none       &kp LS(N4)  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SUBTRACT  &none
+&none        &none  &none  &none  &kp UNDER  &none       &kp LS(N6)  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MULTIPLY  &kp KP_COMMA
+&none        &none  &none  &none  &kp LANG2  &none       &kp LANG1   &kp KP_NUMBER_0  &none            &kp KP_DIVIDE    &kp KP_EQUAL     &none
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
